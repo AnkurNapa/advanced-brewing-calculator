@@ -1,0 +1,124 @@
+{
+  "top": [
+    {
+      "name": "Extra Pale",
+      "count": 154
+    },
+    {
+      "name": "Caramalt",
+      "count": 136
+    },
+    {
+      "name": "Pale Ale",
+      "count": 87
+    },
+    {
+      "name": "Munich",
+      "count": 80
+    },
+    {
+      "name": "Dark Crystal",
+      "count": 79
+    },
+    {
+      "name": "Flaked Oats",
+      "count": 77
+    },
+    {
+      "name": "Wheat",
+      "count": 73
+    },
+    {
+      "name": "Crystal 150",
+      "count": 56
+    },
+    {
+      "name": "Chocolate",
+      "count": 41
+    },
+    {
+      "name": "Carafa Special Malt Type 1",
+      "count": 40
+    },
+    {
+      "name": "Carafa Special Malt Type 3",
+      "count": 32
+    },
+    {
+      "name": "Rye",
+      "count": 32
+    },
+    {
+      "name": "Brown",
+      "count": 28
+    },
+    {
+      "name": "Amber",
+      "count": 26
+    },
+    {
+      "name": "Pilsner",
+      "count": 25
+    },
+    {
+      "name": "Maris Otter",
+      "count": 23
+    },
+    {
+      "name": "Maris Otter Extra Pale",
+      "count": 22
+    },
+    {
+      "name": "Roasted Barley",
+      "count": 18
+    },
+    {
+      "name": "Crystal",
+      "count": 15
+    },
+    {
+      "name": "Extra Pale - Spring Blend",
+      "count": 13
+    },
+    {
+      "name": "Acidulated Malt",
+      "count": 12
+    },
+    {
+      "name": "Wheat Malt",
+      "count": 11
+    },
+    {
+      "name": "Medium Crystal",
+      "count": 10
+    },
+    {
+      "name": "Torrified Wheat",
+      "count": 9
+    },
+    {
+      "name": "Propino Pale Malt",
+      "count": 9
+    },
+    {
+      "name": "Double Roasted Crystal",
+      "count": 8
+    },
+    {
+      "name": "Smoked Malt",
+      "count": 8
+    },
+    {
+      "name": "Black Malt",
+      "count": 8
+    },
+    {
+      "name": "Extra Dark Crystal",
+      "count": 7
+    },
+    {
+      "name": "Dextrin Malt",
+      "count": 7
+    }
+  ]
+}

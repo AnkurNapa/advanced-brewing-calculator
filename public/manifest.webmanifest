@@ -1,0 +1,17 @@
+{
+  "name": "Indian Brewer's Calculator",
+  "short_name": "Brewer's Calc",
+  "description": "A metric brewing water chemistry lab notebook: residual alkalinity, mash pH, salt & acid dosing, sparge adjustment, fermentation tracking, and BJCP style checks.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#e08b2d",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

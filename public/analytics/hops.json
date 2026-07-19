@@ -1,0 +1,206 @@
+{
+  "top": [
+    {
+      "name": "amarillo",
+      "count": 87
+    },
+    {
+      "name": "simcoe",
+      "count": 84
+    },
+    {
+      "name": "centennial",
+      "count": 79
+    },
+    {
+      "name": "citra",
+      "count": 72
+    },
+    {
+      "name": "chinook",
+      "count": 60
+    },
+    {
+      "name": "magnum",
+      "count": 55
+    },
+    {
+      "name": "columbus",
+      "count": 45
+    },
+    {
+      "name": "cascade",
+      "count": 44
+    },
+    {
+      "name": "first gold",
+      "count": 36
+    },
+    {
+      "name": "mosaic",
+      "count": 36
+    },
+    {
+      "name": "nelson sauvin",
+      "count": 26
+    },
+    {
+      "name": "galena",
+      "count": 23
+    },
+    {
+      "name": "bramling cross",
+      "count": 23
+    },
+    {
+      "name": "motueka",
+      "count": 23
+    },
+    {
+      "name": "saaz",
+      "count": 21
+    },
+    {
+      "name": "willamette",
+      "count": 20
+    },
+    {
+      "name": "sorachi ace",
+      "count": 20
+    },
+    {
+      "name": "ahtanum",
+      "count": 15
+    },
+    {
+      "name": "mandarina bavaria",
+      "count": 15
+    },
+    {
+      "name": "fuggles",
+      "count": 13
+    },
+    {
+      "name": "hallertauer mittelfr h",
+      "count": 12
+    },
+    {
+      "name": "challenger",
+      "count": 9
+    },
+    {
+      "name": "coffee",
+      "count": 8
+    },
+    {
+      "name": "perle",
+      "count": 7
+    },
+    {
+      "name": "honey",
+      "count": 6
+    },
+    {
+      "name": "hersbrucker",
+      "count": 6
+    },
+    {
+      "name": "ginger powder",
+      "count": 5
+    },
+    {
+      "name": "ground coffee",
+      "count": 4
+    },
+    {
+      "name": "cocoa nibs",
+      "count": 4
+    },
+    {
+      "name": "vanilla",
+      "count": 4
+    }
+  ],
+  "pairings": [
+    {
+      "name": "citra + simcoe",
+      "count": 47
+    },
+    {
+      "name": "centennial + simcoe",
+      "count": 45
+    },
+    {
+      "name": "amarillo + simcoe",
+      "count": 40
+    },
+    {
+      "name": "centennial + citra",
+      "count": 35
+    },
+    {
+      "name": "amarillo + centennial",
+      "count": 32
+    },
+    {
+      "name": "amarillo + citra",
+      "count": 31
+    },
+    {
+      "name": "centennial + columbus",
+      "count": 30
+    },
+    {
+      "name": "chinook + simcoe",
+      "count": 25
+    },
+    {
+      "name": "citra + mosaic",
+      "count": 25
+    },
+    {
+      "name": "chinook + citra",
+      "count": 23
+    },
+    {
+      "name": "columbus + simcoe",
+      "count": 22
+    },
+    {
+      "name": "mosaic + simcoe",
+      "count": 21
+    },
+    {
+      "name": "centennial + chinook",
+      "count": 20
+    },
+    {
+      "name": "amarillo + mosaic",
+      "count": 20
+    },
+    {
+      "name": "cascade + centennial",
+      "count": 18
+    },
+    {
+      "name": "amarillo + chinook",
+      "count": 16
+    },
+    {
+      "name": "amarillo + cascade",
+      "count": 14
+    },
+    {
+      "name": "amarillo + columbus",
+      "count": 14
+    },
+    {
+      "name": "cascade + simcoe",
+      "count": 13
+    },
+    {
+      "name": "cascade + chinook",
+      "count": 13
+    }
+  ]
+}

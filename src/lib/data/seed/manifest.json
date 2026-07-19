@@ -1,0 +1,21 @@
+{
+  "baseUnits": 47,
+  "units": 80,
+  "inUnits": 24,
+  "category": 20,
+  "materials": 334,
+  "plants": 7,
+  "products": 55,
+  "process": 26,
+  "dates": 21,
+  "transfer": 80,
+  "losses": 36,
+  "prices": 352,
+  "formula": 50,
+  "formulaDetails": 2069,
+  "blend": 7,
+  "sFormula": 31,
+  "sFormulaDetails": 1024,
+  "sMaterials": 47,
+  "sCategory": 3
+}
