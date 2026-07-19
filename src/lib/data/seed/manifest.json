@@ -17,5 +17,7 @@
   "sFormula": 31,
   "sFormulaDetails": 1024,
   "sMaterials": 47,
-  "sCategory": 3
+  "sCategory": 3,
+  "compareFormSpec": 13,
+  "area": 5
 }

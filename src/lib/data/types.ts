@@ -231,5 +231,23 @@ export interface SCategory {
   categoryname: string | null;
 }
 
+/** Process-area grouping (Hot Block, Yeast & Fermentation, Cold Block, Packaged). */
+export interface Area {
+  AreaID: number;
+  AreaSort: number | null;
+  AreaName: string | null;
+}
+
+/** Compare-engine mapping: which Formula line is checked against which Spec analysis. */
+export interface CompareFormSpec {
+  sortfield: number;
+  FProcessID: number;
+  FMaterialID: number;
+  FUnitID: number;
+  SProcessID: number;
+  SAnalysisID: number;
+  SUnitID: number;
+}
+
 /** Unit display system for the UI toggle. Engine always computes in base units. */
 export type UnitSystem = 'metric' | 'us';

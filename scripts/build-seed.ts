@@ -63,6 +63,8 @@ const TABLE_MAP: Record<string, string> = {
   sFormulaDetails: 'brewdat__SFormulaDetails.csv',
   sMaterials: 'brewdat__SMaterials.csv',
   sCategory: 'brewdat__SCategory.csv',
+  compareFormSpec: 'brewapp__CompareFormSpec.csv',
+  area: 'brewapp__Area.csv',
 };
 
 function main(): void {

@@ -27,6 +27,8 @@ import type {
   SFormulaDetail,
   SMaterial,
   SCategory,
+  Area,
+  CompareFormSpec,
 } from './types';
 
 import baseUnitsRaw from './seed/baseUnits.json';
@@ -48,6 +50,8 @@ import sFormulaRaw from './seed/sFormula.json';
 import sFormulaDetailsRaw from './seed/sFormulaDetails.json';
 import sMaterialsRaw from './seed/sMaterials.json';
 import sCategoryRaw from './seed/sCategory.json';
+import areaRaw from './seed/area.json';
+import compareFormSpecRaw from './seed/compareFormSpec.json';
 
 /** The complete, read-only bundled seed data set. */
 export interface SeedData {
@@ -70,6 +74,8 @@ export interface SeedData {
   sFormulaDetails: SFormulaDetail[];
   sMaterials: SMaterial[];
   sCategory: SCategory[];
+  area: Area[];
+  compareFormSpec: CompareFormSpec[];
 }
 
 // JSON is cast to the domain interfaces. The build-seed script guarantees the
@@ -94,6 +100,8 @@ const seed: SeedData = Object.freeze({
   sFormulaDetails: sFormulaDetailsRaw as unknown as SFormulaDetail[],
   sMaterials: sMaterialsRaw as unknown as SMaterial[],
   sCategory: sCategoryRaw as unknown as SCategory[],
+  area: areaRaw as unknown as Area[],
+  compareFormSpec: compareFormSpecRaw as unknown as CompareFormSpec[],
 });
 
 /** Return the frozen, read-only seed data set. */
