@@ -171,17 +171,38 @@ function FormulationInner() {
             <Card className="p-6 text-amber-700">Select a recipe to begin.</Card>
           ) : (
             <>
-              <div className="flex flex-wrap gap-2" role="toolbar" aria-label="Calculation actions">
-                <Button onClick={() => runCalc('forward')}>Calculate Forward</Button>
-                <Button variant="secondary" onClick={() => runCalc('backward')}>
-                  Calculate Backward
-                </Button>
-                <Button variant="ghost" onClick={() => refresh()}>
-                  Sort
-                </Button>
-                <Button variant="ghost" onClick={() => setShowOpstd((v) => !v)}>
-                  {showOpstd ? 'Hide OPSTD' : 'Preview OPSTD'}
-                </Button>
+              <div className="rounded-xl border border-amber-200 bg-parchment p-3">
+                <div className="flex flex-wrap gap-2" role="toolbar" aria-label="Calculation actions">
+                  <Button
+                    onClick={() => runCalc('forward')}
+                    title="Compute ingredient quantities from your target gravity, volume, colour and bitterness."
+                  >
+                    Calculate forward
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    onClick={() => runCalc('backward')}
+                    title="Work the other way: derive the target values from the ingredient quantities you entered."
+                  >
+                    Calculate backward
+                  </Button>
+                  <span className="mx-1 hidden w-px self-stretch bg-amber-200 sm:block" aria-hidden />
+                  <Button variant="ghost" onClick={() => refresh()} title="Re-sort lines by process order.">
+                    Sort lines
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    onClick={() => setShowOpstd((v) => !v)}
+                    title="Preview and print the operating standard for the brewhouse."
+                  >
+                    {showOpstd ? 'Back to recipe' : 'Preview / print OPSTD'}
+                  </Button>
+                </div>
+                <p className="mt-2 text-xs text-amber-700">
+                  <span className="font-semibold text-amber-800">Forward</span> targets → ingredient
+                  amounts. <span className="font-semibold text-amber-800">Backward</span> amounts →
+                  targets. Edit any line below, then recalculate.
+                </p>
               </div>
 
               <HeaderTargets formula={selected} unitSystem={unitSystem} degraded={degraded} />

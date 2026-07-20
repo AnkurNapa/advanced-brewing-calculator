@@ -35,14 +35,15 @@ describe('FormulationPage', () => {
     render(<FormulationPage />);
     const toolbar = screen.getByRole('toolbar', { name: /calculation actions/i });
     fireEvent.click(within(toolbar).getByRole('button', { name: /calculate forward/i }));
-    // Derived-target panel still present after recalculation (label appears in
-    // the HeaderTargets panel; may also appear in a degraded-note, so allow >=1).
-    expect(screen.getAllByText(/brewhouse efficiency/i).length).toBeGreaterThan(0);
+    // The KPI dashboard is still present after recalculation (ABV + Efficiency
+    // are hero tiles that always render).
+    expect(screen.getByText('ABV')).toBeInTheDocument();
+    expect(screen.getAllByText(/efficiency/i).length).toBeGreaterThan(0);
   });
 
   it('toggles the OPSTD preview', () => {
     render(<FormulationPage />);
-    fireEvent.click(screen.getByRole('button', { name: /preview opstd/i }));
+    fireEvent.click(screen.getByRole('button', { name: /opstd/i }));
     expect(screen.getByText(/operating standard preview/i)).toBeInTheDocument();
   });
 });

@@ -87,11 +87,17 @@ export function ProcessGroup({
       <DataTable className="[&_td]:!py-1.5 [&_th]:!py-2">
         <thead>
           <tr>
-            <th>Material</th>
-            <th>Formulation value</th>
+            <th>Ingredient</th>
+            <th title="The target you enter that drives the calc — e.g. % of extract for malt, % of IBU for hops.">
+              Formulation value
+            </th>
             <th>Units</th>
-            <th>Round</th>
-            <th className="text-right">Calculated</th>
+            <th title="Round the calculated amount to this increment (e.g. 25 for a 25&nbsp;lb bag).">
+              Round to
+            </th>
+            <th className="text-right" title="The amount the engine computed for this line.">
+              → Amount
+            </th>
             <th className="sr-only">Actions</th>
           </tr>
         </thead>
