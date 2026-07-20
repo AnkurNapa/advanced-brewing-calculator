@@ -40,7 +40,7 @@ export function AppHeader() {
         >
           {NAV_LINKS.map((link) => {
             const active =
-              pathname === link.href || pathname.startsWith(`${link.href}/`);
+              pathname === link.href || (pathname?.startsWith(`${link.href}/`) ?? false);
             return (
               <Link
                 key={link.href}
