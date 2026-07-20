@@ -10,7 +10,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "seed": "tsx scripts/build-seed.ts"
+    "seed": "tsx scripts/build-sample-seed.ts"
   },
   "dependencies": {
     "@visx/axis": "^4.0.0",

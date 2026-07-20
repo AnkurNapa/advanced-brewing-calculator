@@ -18,10 +18,10 @@ describe('export / import round-trip', () => {
     const json = exportAll(source);
 
     const target = makeRepo();
-    expect(target.listFormulas()).toHaveLength(50);
+    expect(target.listFormulas()).toHaveLength(6);
     importAll(json, { mode: 'replace' }, target);
 
-    expect(target.listFormulas()).toHaveLength(51);
+    expect(target.listFormulas()).toHaveLength(7);
     expect(target.getFormula(created.FormulaID)?.BU).toBe(42);
   });
 
@@ -57,7 +57,7 @@ describe('export / import round-trip', () => {
 
     importAll(json, { mode: 'replace' }, target);
     expect(target.getFormula(a.FormulaID)).toBeUndefined();
-    expect(target.listFormulas()).toHaveLength(51);
+    expect(target.listFormulas()).toHaveLength(7);
   });
 
   it('tolerates a bare overlay object without the envelope', () => {
@@ -66,7 +66,7 @@ describe('export / import round-trip', () => {
     const overlayOnly = JSON.stringify(source.getOverlay());
     const target = makeRepo();
     importAll(overlayOnly, { mode: 'replace' }, target);
-    expect(target.listFormulas()).toHaveLength(51);
+    expect(target.listFormulas()).toHaveLength(7);
   });
 
   it('throws on malformed JSON', () => {

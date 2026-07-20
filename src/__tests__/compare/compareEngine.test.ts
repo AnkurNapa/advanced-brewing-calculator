@@ -58,8 +58,8 @@ function runBestPair(): ReturnType<typeof compareFormulaToSpec> {
 }
 
 describe('compareFormSpec rules', () => {
-  it('loads exactly 13 mapping rules from the seed', () => {
-    expect(seed.compareFormSpec).toHaveLength(13);
+  it('loads exactly 4 mapping rules from the seed', () => {
+    expect(seed.compareFormSpec).toHaveLength(4);
   });
 
   it('every rule carries both a formula side and a spec side', () => {
@@ -73,10 +73,10 @@ describe('compareFormSpec rules', () => {
 });
 
 describe('compareFormulaToSpec', () => {
-  it('produces a result covering all 13 rules (matched + unmatched, none dropped)', () => {
+  it('produces a result covering all 4 rules (matched + unmatched, none dropped)', () => {
     const result = runBestPair();
-    expect(result.totalRules).toBe(13);
-    expect(result.matchedCount + result.unmatched.length).toBe(13);
+    expect(result.totalRules).toBe(4);
+    expect(result.matchedCount + result.unmatched.length).toBe(4);
     expect(result.rows).toHaveLength(result.matchedCount);
   });
 
@@ -96,7 +96,7 @@ describe('compareFormulaToSpec', () => {
 
   it('reports unmatched rules rather than dropping them', () => {
     // A pairing with no shared lines: formula 37 lines vs a mismatched spec.
-    const formula = seed.formula.find((f) => f.FormulaID === 37)!;
+    const formula = seed.formula.find((f) => f.FormulaID === 3)!;
     const spec = seed.sFormula[0];
     const result = compareFormulaToSpec({
       formula,
@@ -108,7 +108,7 @@ describe('compareFormulaToSpec', () => {
       units: seed.units,
     });
     expect(result.matchedCount).toBe(0);
-    expect(result.unmatched).toHaveLength(13);
+    expect(result.unmatched).toHaveLength(4);
     for (const u of result.unmatched) {
       expect(['no-formula-line', 'no-spec-line', 'no-both']).toContain(u.reason);
     }

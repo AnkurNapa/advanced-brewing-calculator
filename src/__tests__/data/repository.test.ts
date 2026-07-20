@@ -16,17 +16,17 @@ function makeRepo() {
 describe('seed loading', () => {
   it('loads seed tables with the expected row counts', () => {
     const seed = getSeed();
-    expect(seed.materials).toHaveLength(334);
-    expect(seed.formula).toHaveLength(50);
-    expect(seed.formulaDetails).toHaveLength(2069);
-    expect(seed.plants).toHaveLength(7);
-    expect(seed.process).toHaveLength(26);
+    expect(seed.materials).toHaveLength(35);
+    expect(seed.formula).toHaveLength(6);
+    expect(seed.formulaDetails).toHaveLength(59);
+    expect(seed.plants).toHaveLength(2);
+    expect(seed.process).toHaveLength(10);
   });
 
   it('lists formulas from seed when overlay is empty', () => {
     const repo = makeRepo();
-    expect(repo.listFormulas()).toHaveLength(50);
-    expect(repo.listMaterials()).toHaveLength(334);
+    expect(repo.listFormulas()).toHaveLength(6);
+    expect(repo.listMaterials()).toHaveLength(35);
   });
 });
 
@@ -39,7 +39,7 @@ describe('formula CRUD round-trips through the overlay', () => {
   it('creates a formula with a fresh id', () => {
     const created = repo.createFormula({ PlantID: 7, ProductID: 9 });
     expect(created.FormulaID).toBeGreaterThan(0);
-    expect(repo.listFormulas()).toHaveLength(51);
+    expect(repo.listFormulas()).toHaveLength(7);
     expect(repo.getFormula(created.FormulaID)?.PlantID).toBe(7);
   });
 
@@ -63,7 +63,7 @@ describe('formula CRUD round-trips through the overlay', () => {
     const id = repo.listFormulas()[0].FormulaID;
     repo.deleteFormula(id);
     expect(repo.getFormula(id)).toBeUndefined();
-    expect(repo.listFormulas()).toHaveLength(49);
+    expect(repo.listFormulas()).toHaveLength(5);
   });
 
   it('persists edits under the documented overlay key', () => {
@@ -73,7 +73,7 @@ describe('formula CRUD round-trips through the overlay', () => {
     expect(storage.getItem(OVERLAY_KEY)).not.toBeNull();
     // A second repo over the same storage sees the edit.
     const r2 = new Repository(storage);
-    expect(r2.listFormulas()).toHaveLength(51);
+    expect(r2.listFormulas()).toHaveLength(7);
   });
 });
 

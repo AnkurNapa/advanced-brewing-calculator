@@ -1,1 +1,1 @@
-[{"AreaID":1,"AreaSort":null,"AreaName":null},{"AreaID":2,"AreaSort":1,"AreaName":"Hot Block Process Segment"},{"AreaID":3,"AreaSort":2,"AreaName":"Yeast & Fermentation Process Segment"},{"AreaID":4,"AreaSort":3,"AreaName":"Cold Block Process Segment"},{"AreaID":5,"AreaSort":4,"AreaName":"Packaged Process Segment"}]
+[{"AreaID":1,"AreaSort":1,"AreaName":"Hot Block"},{"AreaID":2,"AreaSort":2,"AreaName":"Yeast & Fermentation"},{"AreaID":3,"AreaSort":3,"AreaName":"Cold Block"},{"AreaID":4,"AreaSort":4,"AreaName":"Packaged"}]
