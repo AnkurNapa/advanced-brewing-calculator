@@ -1,8 +1,6 @@
 /**
- * Domain types for the Advanced Brewing Calculator.
- * These mirror the Master Brewers Toolbox `brewdat.mdb` columns exactly
- * (see MasterBrewers_KB/02_Data_Model.md). Nullable DB columns are `| null`.
- * This file is the shared contract for the engine, data, and UI layers.
+ * Domain types for the Advanced Brewing Calculator — the shared contract for the
+ * engine, data, and UI layers. Optional/absent values are `| null`.
  */
 
 export interface BaseUnit {
@@ -88,7 +86,7 @@ export interface Process {
   AreaID: number | null;
 }
 
-export interface BrewDate {
+export interface EffectiveDate {
   EdateID: number;
   Edate: string; // ISO date
 }

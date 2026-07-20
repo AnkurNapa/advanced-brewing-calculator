@@ -10,7 +10,7 @@ const brandFont = Archivo({
 
 const APP_TITLE = 'Advanced Brewing Calculator';
 const APP_DESCRIPTION =
-  'A pro-tier brewing formulation, specification, and compare engine — a modern rebuild of the Master Brewers Toolbox. Recipe → ingredient quantities, gravity, color, IBU, RDF, brewhouse efficiency and the OPSTD operating standard.';
+  'A pro-tier brewing formulation, specification, and compare engine. Recipe → ingredient quantities, gravity, color, IBU, RDF, brewhouse efficiency and the OPSTD operating standard. All figures are estimates for planning.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(

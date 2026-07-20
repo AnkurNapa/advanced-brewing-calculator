@@ -2,18 +2,18 @@
  * formulaCalc.ts — Formulation calc orchestrator (pure, no React/DOM).
  *
  * Composes the pure engine (`@/lib/engine`) over a Formula + its FormulaDetail
- * lines to reproduce the Master Brewers Toolbox "Calculate" behaviour:
+ * lines to reproduce the reference brewing model "Calculate" behaviour:
  *
- *   - Calculate Forward  : targets/formulation inputs -> line Quantities.
- *                          Each raw-material line's `Fraction` (% of extract,
- *                          % of IBU, ...) + material chemistry yields a base-unit
- *                          quantity, converted back to the line's parameter unit
- *                          and rounded to `Qround`. Header targets (brewhouse
- *                          efficiency, estimated SRM/IBU, mash/beer RDF) are then
- *                          derived from the computed lines.
- *   - Calculate Backward : zero the Fraction on every raw-material line, take the
- *                          reported quantity as truth, and derive the formulation
- *                          Fractions + header targets from those quantities.
+ * - Calculate Forward : targets/formulation inputs -> line Quantities.
+ * Each raw-material line's `Fraction` (% of extract,
+ * % of IBU, ...) + material chemistry yields a base-unit
+ * quantity, converted back to the line's parameter unit
+ * and rounded to `Qround`. Header targets (brewhouse
+ * efficiency, estimated SRM/IBU, mash/beer RDF) are then
+ * derived from the computed lines.
+ * - Calculate Backward : zero the Fraction on every raw-material line, take the
+ * reported quantity as truth, and derive the formulation
+ * Fractions + header targets from those quantities.
  *
  * All internal math runs in BASE UNITS (pound, barrel, °Plato). Every function
  * is immutable: the input Formula/lines are never mutated; new objects are
@@ -21,7 +21,7 @@
  * for kinetic hop utilisation, per-material moisture, etc.) the field degrades
  * gracefully and the reason is recorded in `result.degraded`.
  *
- * Source of behaviour: MasterBrewers_KB/01_Functional_Spec.md §4–6 and
+ * Source of behaviour: the calculations reference §4–6 and
  * 04_Calculations_Reference.md §3/§5/§6/§7/§8/§10.
  */
 
@@ -227,7 +227,7 @@ function baseLbsToDisplay(baseLbs: number, line: FormulaDetail, ctx: CalcContext
 /**
  * Brewhouse efficiency (% extract recovered) from the extract balance:
  *
- *   BHE = 100 * (fermenter malt extract) / (theoretical malt+grits extract)
+ * BHE = 100 * (fermenter malt extract) / (theoretical malt+grits extract)
  *
  * where fermenter malt extract = bbl1*lbbl(OG1) minus the extract contributed by
  * post-lauter syrups, and theoretical extract = Σ(reported weight * solids%).
@@ -464,7 +464,7 @@ function backwardLineFraction(
     if (weightLbs == null || header.bbl1 <= 0 || header.og1 <= 0) return null;
     const preLauter = kind === 'malt' || kind === 'grits';
     // Invert extractAdditionQuantityLbs:
-    //   frac% = weight * solids% * (BHE/100 if pre-lauter) / (bbl1*lbbl(og1)) * 100
+    // frac% = weight * solids% * (BHE/100 if pre-lauter) / (bbl1*lbbl(og1)) * 100
     const fermenterExtract = header.bbl1 * lbbl(header.og1);
     let extractLbs = weightLbs * (solids / 100);
     if (preLauter) extractLbs *= bhe / 100;
@@ -476,7 +476,7 @@ function backwardLineFraction(
     const alpha = solids;
     if (weightLbs == null || alpha <= 0 || header.bbl2 <= 0 || header.bu <= 0) return null;
     // Invert bitteringHopQuantity for %ofIBU (base-pound hops):
-    //   frac = weightLbs * alpha% * util% * 1e4 / (bbl2 * 258 * IBU)
+    // frac = weightLbs * alpha% * util% * 1e4 / (bbl2 * 258 * IBU)
     return (weightLbs * alpha * hopUtil * 1e4) / (header.bbl2 * 258 * header.bu);
   }
 
@@ -623,7 +623,7 @@ export function deriveHeaderTargets(
       patch.wRDF = round2(mashRDF(fermenterRDF, ffSyr, fMalt, fGrits));
       const srmForRdf = patch.SRMest ?? formula.SRM ?? 0;
       const estMash = estimatedMashRDFRegression(patch.wRDF, srmForRdf);
-      // beerRDFest = mashRDFest + (beerRDF - mashRDF)   (KB §4)
+      // beerRDFest = mashRDFest + (beerRDF - mashRDF) (KB §4)
       patch.bRDFest = round2(estMash + (fermenterRDF - patch.wRDF));
     } else {
       degraded.push('Mash RDF: no malt/grits fraction to allocate fermentables against.');

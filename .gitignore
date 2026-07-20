@@ -33,3 +33,7 @@ next-env.d.ts
 # Local-only recipe inputs (aggregate-only sources; never committed)
 data/private/
 .gstack/
+
+# Local-only dev artifacts (source-extraction tooling / internal design notes)
+scripts/build-seed.ts
+docs/superpowers/

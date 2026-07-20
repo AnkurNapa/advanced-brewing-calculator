@@ -1,6 +1,6 @@
 /**
  * Hop additions & utilization.
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §6, §8, §9.
+ * Source: the calculations reference §6, §8, §9.
  */
 
 // ---------------------------------------------------------------------------

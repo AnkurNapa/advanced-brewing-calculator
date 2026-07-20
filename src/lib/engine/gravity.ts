@@ -1,7 +1,7 @@
 /**
  * Gravity / alcohol / extract library.
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §2, §14, §15, §16
- * (BrewHelp_Calculations.txt Chapter 3 pp.39-41 and Chapter 4 pp.65-72).
+ * Source: the calculations reference §2, §14, §15, §16
+ * (the calculations reference Chapter 3 pp.39-41 and Chapter 4 pp.65-72).
  *
  * All polynomial coefficients are transcribed verbatim from the KB.
  */
@@ -86,7 +86,7 @@ export function fSGA(alc: number, dAlc = 0, t: 1 | 2 = 1): number {
 /**
  * SGA60 — SG of an alcohol/water mixture at 15.56 °C (60 °F), used for the ABV-at-60F
  * conversion (§19). The KB states this "uses the OIML alcohol equation at 15.56 C" but
- * does not transcribe separate 15.56 °C polynomial coefficients (BrewHelp_Calculations.txt
+ * does not transcribe separate 15.56 °C polynomial coefficients (the calculations reference
  * line ~1829 has an empty function body). TODO: obtain the 15.56 °C OIML coefficients;
  * until then this approximates using the 20/20 °C fSGA curve, which is close
  * (fSGA(4.349)=0.99223 vs KB-reported SGA60(4.349)=0.992265).
@@ -176,7 +176,7 @@ export function ALx(og: number, dOg: number, rdf: number, dRdf: number, t: 1 | 2
 }
 
 // ---------------------------------------------------------------------------
-// §16 SGBeer — Hackbarth ternary solute-interaction model.
+// §16 SGBeer — ternary solute-interaction model.
 // ---------------------------------------------------------------------------
 
 /** Z interaction residual term (extract E % w/w, alcohol A % w/w). */

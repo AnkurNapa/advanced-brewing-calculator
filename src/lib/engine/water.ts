@@ -1,6 +1,6 @@
 /**
  * Water chemistry — residual alkalinity.
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §17.
+ * Source: the calculations reference §17.
  */
 
 /**

@@ -145,7 +145,7 @@ export function OpstdReport({
         ))}
 
         <footer className="mt-6 border-t border-amber-200 pt-2 text-xs text-amber-700">
-          Advanced Brewing Calculator · rebuild of the Master Brewers Toolbox (J. Hackbarth / MBAA)
+          Advanced Brewing Calculator · figures are estimates for planning only
         </footer>
       </div>
     </div>

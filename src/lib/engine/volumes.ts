@@ -1,6 +1,6 @@
 /**
  * Volumes worked backward from fermenter.
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §11.
+ * Source: the calculations reference §11.
  */
 
 import { bblwt, lbbl } from './gravity';

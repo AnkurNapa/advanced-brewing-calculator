@@ -1,6 +1,6 @@
 /**
  * Priming syrups (Formula = "% w/w", added to finished beer).
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §4.
+ * Source: the calculations reference §4.
  */
 
 import { lbbl, P, SGBeer, REx, ALx } from './gravity';

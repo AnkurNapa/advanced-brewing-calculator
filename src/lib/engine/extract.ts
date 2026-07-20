@@ -1,6 +1,6 @@
 /**
  * Extract additions — Malt, Grits, Syrup, Kräusen (Formula = "% of Extract").
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §3.
+ * Source: the calculations reference §3.
  */
 
 import { fSGE, lbbl } from './gravity';

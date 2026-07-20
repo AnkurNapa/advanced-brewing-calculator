@@ -1,18 +1,18 @@
 /**
  * compareEngine.ts
- * Pure comparison orchestrator for the Compare module — a rebuild of the
- * Master Brewers Toolbox "Compare" application (Functional Spec §8).
+ * Pure comparison orchestrator for the Compare module — a advanced build the
+ * the reference brewing model "Compare" application (Functional Spec §8).
  *
  * A `CompareFormSpec` table holds 13 mapping rules. Each rule pins a Formula
  * line (FProcessID, FMaterialID) to a Spec analysis line (SProcessID,
  * SAnalysisID) and records the display unit on each side (FUnitID / SUnitID).
  * For every rule we:
- *   1. find the Formula line matching (FProcessID, FMaterialID),
- *   2. find the Spec line matching (SProcessID, SAnalysisID),
- *   3. normalize BOTH values to their base units (never compare raw values
- *      across different UnitIDs), and
- *   4. emit a diff row {label, formulaValue, specValue, unit, delta,
- *      withinTolerance, ...}.
+ * 1. find the Formula line matching (FProcessID, FMaterialID),
+ * 2. find the Spec line matching (SProcessID, SAnalysisID),
+ * 3. normalize BOTH values to their base units (never compare raw values
+ * across different UnitIDs), and
+ * 4. emit a diff row {label, formulaValue, specValue, unit, delta,
+ * withinTolerance, ...}.
  *
  * Rules with no matching line on either side are REPORTED as unmatched, never
  * silently dropped. This module is pure and immutable — no React, no I/O; all

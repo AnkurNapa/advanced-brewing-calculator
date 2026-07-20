@@ -19,7 +19,7 @@ import { HeaderTargets } from '@/components/formulation/HeaderTargets';
 import { OpstdReport } from '@/components/formulation/OpstdReport';
 
 /**
- * /formulation — the Master Brewers Formula application: pick a recipe, edit its
+ * /formulation — the Formula application: pick a recipe, edit its
  * parameter lines grouped by process step, run Calculate Forward/Backward through
  * the engine, and preview the printable OPSTD.
  */

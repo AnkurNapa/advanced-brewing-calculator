@@ -39,9 +39,9 @@ describe('app shell landing', () => {
     expect(hrefs).toContain('/compare');
   });
 
-  it('mentions the seeded Master Brewers recipes', () => {
+  it('mentions the seeded example recipes', () => {
     render(<Home />);
-    expect(screen.getByText(/master brewers recipes/i)).toBeInTheDocument();
+    expect(screen.getByText(/example recipes/i)).toBeInTheDocument();
   });
 });
 

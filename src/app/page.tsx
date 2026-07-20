@@ -124,7 +124,7 @@ export default function Home() {
       {/* Hero */}
       <section aria-labelledby="landing-heading" className="max-w-3xl">
         <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-amber-600">
-          Master Brewers Toolbox · rebuilt
+          Pro-tier brewing engine
         </p>
         <h1
           id="landing-heading"
@@ -136,7 +136,7 @@ export default function Home() {
         <p className="mt-4 text-base leading-relaxed text-amber-800">
           Formulate recipes, derive full specifications, and compare the two —
           all in the browser, computed from base units so the numbers hold at
-          any scale. Seeded with real Master Brewers recipes so you can explore
+          any scale. Loaded with a library of example recipes so you can explore
           a working brew on the first click.
         </p>
       </section>

@@ -1,6 +1,6 @@
 /**
  * Blending — two beers by volume fraction (Fig 2.05).
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §19.
+ * Source: the calculations reference §19.
  */
 
 import { lbbl, P } from './gravity';
@@ -14,7 +14,7 @@ export function blendedOG(og1: number, og2: number, v1: number): number {
 
 /**
  * RDFpp (blend) = (RDF1*lbbl(OG1)*V1/100 + RDF2*lbbl(OG2)*(100-V1)/100)
- *                 / (V1*lbbl(OG1)/100 + (100-V1)*lbbl(OG2)/100)
+ * / (V1*lbbl(OG1)/100 + (100-V1)*lbbl(OG2)/100)
  */
 export function blendedRDF(og1: number, rdf1: number, og2: number, rdf2: number, v1: number): number {
   const numerator = (rdf1 * lbbl(og1) * v1) / 100 + (rdf2 * lbbl(og2) * (100 - v1)) / 100;

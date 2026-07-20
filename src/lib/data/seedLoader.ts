@@ -16,7 +16,7 @@ import type {
   Plant,
   Product,
   Process,
-  BrewDate,
+  EffectiveDate,
   Transfer,
   Loss,
   Price,
@@ -63,7 +63,7 @@ export interface SeedData {
   plants: Plant[];
   products: Product[];
   process: Process[];
-  dates: BrewDate[];
+  dates: EffectiveDate[];
   transfer: Transfer[];
   losses: Loss[];
   prices: Price[];
@@ -89,7 +89,7 @@ const seed: SeedData = Object.freeze({
   plants: plantsRaw as unknown as Plant[],
   products: productsRaw as unknown as Product[],
   process: processRaw as unknown as Process[],
-  dates: datesRaw as unknown as BrewDate[],
+  dates: datesRaw as unknown as EffectiveDate[],
   transfer: transferRaw as unknown as Transfer[],
   losses: lossesRaw as unknown as Loss[],
   prices: pricesRaw as unknown as Price[],

@@ -1,6 +1,6 @@
 /**
  * Brewhouse efficiency + back-calc iteration.
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §7.
+ * Source: the calculations reference §7.
  */
 
 import { bblwt, lbbl } from './gravity';

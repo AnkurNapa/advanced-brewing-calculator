@@ -1,6 +1,6 @@
 /**
  * Chapter 4 spec engine: RDF/OG/E-A/RDA/ADA, ABV, ash, calories, protein, carbs.
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §13, §19.
+ * Source: the calculations reference §13, §19.
  * Worked at RE=4.771, ALC=4.269, OG=13.0, RDF=64.9.
  */
 

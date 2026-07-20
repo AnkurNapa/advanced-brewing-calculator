@@ -12,7 +12,7 @@
  * uses the engine's closed-form REx/ALx (which also carry tolerance
  * propagation via their t=2 branch).
  *
- * Source of behaviour: MasterBrewers_KB/04_Calculations_Reference.md §13–19
+ * Source of behaviour: the calculations reference §13–19
  * and 01_Functional_Spec.md §2. Pure + immutable — no React, no mutation.
  */
 

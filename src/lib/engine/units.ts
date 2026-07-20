@@ -1,9 +1,9 @@
 /**
  * Unit conversion engine.
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §1 "Unit conversion"
+ * Source: the calculations reference §1 "Unit conversion"
  *
- *   Base Unit = Unit * (BaseUnitPerUnit) + (BaseUnitIntercept)
- *   Unit      = (Base Unit - BaseUnitIntercept) / (BaseUnitPerUnit)
+ * Base Unit = Unit * (BaseUnitPerUnit) + (BaseUnitIntercept)
+ * Unit = (Base Unit - BaseUnitIntercept) / (BaseUnitPerUnit)
  *
  * All internal engine math operates in base units (pound, barrel, inch, °F).
  * This module converts a display-unit value to/from its base unit using the

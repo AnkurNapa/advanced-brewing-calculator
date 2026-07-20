@@ -45,7 +45,7 @@ export function SpecList() {
   return (
     <div className="flex flex-col gap-4">
       <p className="text-sm text-amber-800">
-        {formulas.length} seeded specifications from the Master Brewers Toolbox.
+        {formulas.length} example specifications.
         Select one to inspect its analysis lines (target with low/nominal/high
         band).
       </p>

@@ -1,6 +1,6 @@
 /**
  * Estimated Beer Color (SRM).
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §5.
+ * Source: the calculations reference §5.
  *
  * Assumes kettle color gain approximately cancels fermentation color loss.
  * Malt color reference: Congress Wort Color at 8.0 Plato = 21.32 lbs extract/bbl.

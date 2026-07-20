@@ -1,10 +1,10 @@
 /**
  * Mash RDF & Estimated Mash RDF.
- * Source: MasterBrewers_KB/04_Calculations_Reference.md §10.
+ * Source: the calculations reference §10.
  *
  * The full Brandam (2003) enzymatic-hydrolysis kinetic model (RK4 at 1-min steps,
  * gelatinization + alpha/beta-amylase denaturation + starch/dextrin -> sugars, with
- * rate constants on BrewHelp_Calculations.txt pp.47-49) is NOT implemented here.
+ * rate constants on the calculations reference pp.47-49) is NOT implemented here.
  * TODO: implement the full RK4 simulation for `estimatedMashRDF` precision mode;
  * for now only the documented regression fallback is implemented, per the design spec's
  * "regression fallback may be a documented TODO stub" allowance.
@@ -34,7 +34,7 @@ export function mashRDF(fermenterRDF: number, ffSyr: number, fMalt: number, fGri
 
 /**
  * Estimated Mash RDF — regression fallback from preliminary RDF + malt color.
- * estRDF = 36.78 + 0.3799*RDF - 0.1031*Color   (adj R^2 ~ 0.91)
+ * estRDF = 36.78 + 0.3799*RDF - 0.1031*Color (adj R^2 ~ 0.91)
  *
  * This is a documented approximation of the full Brandam kinetic model (RK4 simulation),
  * which is not yet implemented — see the module-level TODO.

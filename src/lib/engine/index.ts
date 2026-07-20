@@ -1,6 +1,6 @@
 /**
  * Barrel export for the pure calculation engine.
- * See MasterBrewers_KB/04_Calculations_Reference.md for the source formulas.
+ * See the calculations reference for the source formulas.
  */
 
 export * from './units';

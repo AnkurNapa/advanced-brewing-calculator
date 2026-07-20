@@ -32,6 +32,6 @@ describe('specification page', () => {
 
   it('lists seeded specifications', () => {
     render(<SpecificationPage />);
-    expect(screen.getByText(/seeded specifications/i)).toBeInTheDocument();
+    expect(screen.getByText(/example specifications/i)).toBeInTheDocument();
   });
 });
